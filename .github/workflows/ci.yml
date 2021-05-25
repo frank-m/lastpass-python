@@ -49,7 +49,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        pip install pep8
+        pip install pycodestyle
     - name: Lint
       run: |
-        pep8 --repeat --show-source --exclude=.venv,.tox,dist,docs,build,lastpass_python.egg-info,.git --ignore=E501,E731 .
+        pycodestyle --repeat --show-source --exclude=.venv,.tox,dist,docs,build,lastpass_python.egg-info,.git --ignore=E501,E731 .
